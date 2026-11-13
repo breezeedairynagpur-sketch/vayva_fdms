@@ -1,0 +1,29 @@
+mkdir vayva_fdms
+cd vayva_fdms
+mkdir src
+mkdir src\config
+mkdir src\services
+mkdir src\controllers
+mkdir src\routes
+
+
+start
+New-Item -ItemType File -Force -Path `
+"src/config/database.js", `
+"src/services/settings.service.js", `
+"src/controllers/settings.controller.js", `
+"src/routes/settings.routes.js", `
+"src/app.js", `
+".env", `
+".env.example", `
+".gitignore", `
+"server.js"
+end
+
+
+npm init -y
+
+
+npm install express dotenv mysql2 cors  
+npm install --save-dev nodemon
+
